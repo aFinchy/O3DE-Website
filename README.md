@@ -2,6 +2,16 @@
 
 Below is a guide that members of the community can follow to assist in creation of blogs. 
 
+## Templates and Examples
+remoteobjects
+| Markdown  | Live Version |
+| ------------- | ------------- |
+| [Remote object support in Open 3D Engine](/blogs/remoteobjects)  | [Remote object support in Open 3D Engine](https://www.o3de.org/blog/posts/remote-objects/)  |
+| [Vectors, Matrices & Matrix Order](/blogs/vectors-matrices-matrix-order)  | [Vectors, Matrices & Matrix Order](https://www.o3de.org/blog/posts/vectors-matrices-matrix-order/)  |
+
+[Template](/blogs/template)
+ 
+
 ## Blog Headers
 
 Blog headers are essential in every blog. This helps show the website that it is infact a blog, and tells the server how to access that page, and all the top level information. 
@@ -25,6 +35,43 @@ full_img: ""
 `author:` Author is the person who wrote the blog. This can be First name, first and Last, or anything along those lines.  <br>
 `blog_img:` Blog Image is the image that will show up in the Blog list. This will not show on the Blog it's self. The default value is "/images/blog/announcement_thumbnail.jpg"  <br>
 `full_img:` Full Blog image is the image that will render at the top level of the blog. This is used only when there is a image in the blog that shows at the top.  <br>
+
+## Images
+
+To format an image, use similar syntax to [links](#links), but add a leading `!`
+character. The square brackets contain the image's alt text. Try to always use
+alt text so that people using screen readers can get some benefit from the
+image.
+
+![O3DE icon](/img/logos/O3DE-Circle-LogoMark-REV-MONO.svg)
+
+
+The `image-width` shortcode adds an image with alternate text and restricts the image's width. The `image-width` shortcode can ensure image sizes are consistent within a topic, and that large images and `.svg` diagrams don't scale overly large in wide browser windows.
+
+`image-width` takes three double-quoted named parameters:
+
+1. `src="/images/<image.png>"` - Image file path.
+1. `width="<image width>"` - Scale the image by specifying a width in pixels.
+1. `alt="<image description>"` - A string describing the image.
+
+`image-width` example:
+
+```markdown
+{{</* image-width src="/images/blog/blog_img.png" width="700" alt="The O3DE Welcome Guide splash image." */>}}
+```
+
+`image-width` example output:
+
+{{< image-width src="/images/images/blog/blog_img.png" width="700" alt="The O3DE Welcome Guide splash image." >}}
+
+An image can also be a link. This time the O3DE icon links to the O3DE website. Outer square brackets enclose
+the entire image tag, and the link target is in the parentheses at the end.
+
+[![O3DE icon](/img/logos/O3DE-Circle-LogoMark-REV-MONO.svg)](https://o3de.org)
+
+You can also use HTML for images, but it is not preferred.
+
+<img src="/img/logos/O3DE-Circle-LogoMark-REV-MONO.svg" alt="O3DE icon" />
 
 ## Heading levels
 
@@ -253,43 +300,6 @@ link target in parentheses. [Link to O3DE Docs](https://www.o3de.org/docs/) or
 
 You can also use HTML, but it is not preferred.
 <a href="https://www.o3de.org">Link to O3DE.org</a>
-
-## Images
-
-To format an image, use similar syntax to [links](#links), but add a leading `!`
-character. The square brackets contain the image's alt text. Try to always use
-alt text so that people using screen readers can get some benefit from the
-image.
-
-![O3DE icon](/img/logos/O3DE-Circle-LogoMark-REV-MONO.svg)
-
-
-The `image-width` shortcode adds an image with alternate text and restricts the image's width. The `image-width` shortcode can ensure image sizes are consistent within a topic, and that large images and `.svg` diagrams don't scale overly large in wide browser windows.
-
-`image-width` takes three double-quoted named parameters:
-
-1. `src="/images/<image.png>"` - Image file path.
-1. `width="<image width>"` - Scale the image by specifying a width in pixels.
-1. `alt="<image description>"` - A string describing the image.
-
-`image-width` example:
-
-```markdown
-{{</* image-width src="/images/welcome-guide/guide_img.png" width="700" alt="The O3DE Welcome Guide splash image." */>}}
-```
-
-`image-width` example output:
-
-{{< image-width src="/images/welcome-guide/guide_img.png" width="700" alt="The O3DE Welcome Guide splash image." >}}
-
-An image can also be a link. This time the O3DE icon links to the O3DE website. Outer square brackets enclose
-the entire image tag, and the link target is in the parentheses at the end.
-
-[![O3DE icon](/img/logos/O3DE-Circle-LogoMark-REV-MONO.svg)](https://o3de.org)
-
-You can also use HTML for images, but it is not preferred.
-
-<img src="/img/logos/O3DE-Circle-LogoMark-REV-MONO.svg" alt="O3DE icon" />
 
 ## Tables
 
