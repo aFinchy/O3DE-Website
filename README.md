@@ -1,31 +1,60 @@
 # O3DE-Website
 
-This page serves two purposes:
+Below is a guide that members of the community can follow to assist in creation of blogs. 
 
-- Demonstrate how the **Open 3D Engine (O3DE)** documentation uses Markdown.
-- Provide a "smoke test" document we can use to test HTML, CSS, and template
-  changes that affect the overall documentation.
+## Blog Headers
+
+Blog headers are essential in every blog. This helps show the website that it is infact a blog, and tells the server how to access that page, and all the top level information. 
+
+<img width="497" alt="Image_1" src="https://user-images.githubusercontent.com/80487462/216458705-b25f96df-6722-441e-8a05-3193afc7c260.PNG">
+
+```
+---
+title: "CMake Essentials Series - Part 1"
+date: 2022-10-05
+slug: cmake-essentials-series-part-1
+author: Tom Hulton-Harrop
+blog_img: "/images/blog/announcement_thumbnail.jpg"
+full_img: ""
+---
+```
+
+`title:` Title of the blog. <br>
+`date:` Date would be the date of the blog being released.  The date is NOT todays dates. <br>
+`slug:` Slug is the url that the blog would be visited at. For example: https://o3de.org/blog/posts/cmake-essentials-series-part-1/  <br>
+`author:` Author is the person who wrote the blog. This can be First name, first and Last, or anything along those lines.  <br>
+`blog_img:` Blog Image is the image that will show up in the Blog list. This will not show on the Blog it's self. The default value is "/images/blog/announcement_thumbnail.jpg"  <br>
+`full_img:` Full Blog image is the image that will render at the top level of the blog. This is used only when there is a image in the blog that shows at the top.  <br>
 
 ## Heading levels
 
 The above heading is an H2. The page title renders as an H1. The following
-sections show H3-H6.
+sections show H1-H6.
 
-### H3
+`# H1`
 
-This is in an H3 section.
+# This is in an H1 section.
 
-#### H4
+`## H2`
 
-This is in an H4 section.
+## This is in an H2 section.
 
-##### H5
+`### H3`
 
-This is in an H5 section.
+### This is in an H3 section.
 
-###### H6
+`#### H4`
 
-This is in an H6 section.
+#### This is in an H4 section.
+
+`##### H5`
+
+#### This is in an H5 section.
+
+`###### H6`
+
+#### This is in an H6 section.
+
 
 ## Inline elements
 
@@ -44,6 +73,19 @@ other block-level element.
 - ***<u>underline bold italic</u>***
 - `monospace text`
 - **`monospace bold`**
+
+```
+- **bold**
+- _italic_
+- ***bold italic***
+- ~~strikethrough~~
+- <u>underline</u>
+- _<u>underline italic</u>_
+- **<u>underline bold</u>**
+- ***<u>underline bold italic</u>***
+- `monospace text`
+- **`monospace bold`**
+```
 
 ## Lists
 
